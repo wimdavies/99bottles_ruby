@@ -13,12 +13,12 @@ class Bottles
       "#{quantity(number).capitalize} #{container(number)} of beer on the wall, " +
       "#{quantity(number)} #{container(number)} of beer.\n" +
       "#{instruction(number)}, " +
-      "99 bottles of beer on the wall.\n"
+      "#{quantity(successor(number))} #{container(number - 1)} of beer on the wall.\n"
     else
       "#{quantity(number).capitalize} #{container(number)} of beer on the wall, " +
       "#{quantity(number)} #{container(number)} of beer.\n" +
       "#{instruction(number)}, " +
-      "#{quantity(number - 1)} #{container(number - 1)} of beer on the wall.\n"      
+      "#{quantity(successor(number))} #{container(number - 1)} of beer on the wall.\n"      
     end
   end
 
@@ -51,6 +51,14 @@ class Bottles
       'no more'
     else
       number.to_s
+    end
+  end
+
+  def successor(number)
+    if number == 0
+      99
+    else
+      number - 1
     end
   end
 end
