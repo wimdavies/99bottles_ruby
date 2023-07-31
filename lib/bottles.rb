@@ -22,6 +22,8 @@ class BottleNumber
     case number
     when 0
       BottleNumber0
+    when 6
+      BottleNumber6
     when 1
       BottleNumber1
     else
@@ -80,5 +82,15 @@ class BottleNumber1 < BottleNumber
 
   def pronoun
     'it'
+  end
+end
+
+class BottleNumber6 < BottleNumber
+  def quantity
+    "1"
+  end
+
+  def container
+    "six-pack"
   end
 end
