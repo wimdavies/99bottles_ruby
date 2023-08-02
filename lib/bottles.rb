@@ -8,6 +8,25 @@ class Bottles
   end
 
   def verse(number)
+    BottleVerse.new(number).verse(number)
+
+    # bottle_number = BottleNumber.for(number)
+
+    # "#{bottle_number} of beer on the wall, ".capitalize +
+    # "#{bottle_number} of beer.\n" +
+    # "#{bottle_number.instruction}, " +
+    # "#{bottle_number.successor} of beer on the wall.\n"
+  end
+end
+
+class BottleVerse
+  attr_reader :number
+
+  def initialize(number)
+    @number = number
+  end
+
+  def verse(number)
     bottle_number = BottleNumber.for(number)
 
     "#{bottle_number} of beer on the wall, ".capitalize +
