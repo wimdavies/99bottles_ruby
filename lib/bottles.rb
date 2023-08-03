@@ -1,9 +1,3 @@
-class VerseFake
-  def self.lyrics(number)
-    "This is verse #{number}.\n" 
-  end
-end
-
 class CountdownSong
   attr_reader :verse_template, :max, :min
 
