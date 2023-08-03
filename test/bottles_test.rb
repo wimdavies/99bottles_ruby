@@ -97,7 +97,7 @@ end
 class CountdownSongTest < Minitest::Test
   def test_verse
     expected = "This is verse 500.\n"
-    assert_equal(expected, CountdownSong.new(verse_template: VerseFake).verse(500))
+    assert_equal expected, CountdownSong.new(verse_template: VerseFake).verse(500)
   end
 
   def test_verses
@@ -107,7 +107,7 @@ class CountdownSongTest < Minitest::Test
     "This is verse 98.\n" +
     "\n" +
     "This is verse 97.\n"
-    assert_equal(expected, CountdownSong.new(verse_template: VerseFake).verses(99, 97))
+    assert_equal expected, CountdownSong.new(verse_template: VerseFake).verses(99, 97)
   end
 
   def test_song
@@ -121,6 +121,6 @@ class CountdownSongTest < Minitest::Test
     "This is verse 44.\n" +
     "\n" +
     "This is verse 43.\n"
-    assert_equal(expected, CountdownSong.new(verse_template: VerseFake, max: 47, min: 43).song)
+    assert_equal expected, CountdownSong.new(verse_template: VerseFake, max: 47, min: 43).song
   end
 end
